@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TIANHAO-RENHAO S.L</title>
+  <meta name="description" content="Providing fresh and healthy fruits and vegetables for sale in Europe">
+  <style>
+    :root{
+      --primary:#2a6b2a;
+      --primary-dark:#1e4d1e;
+      --text:#333;
+      --bg:#f7fbf7;
+    }
+    *{box-sizing:border-box}
+    body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; color: var(--text); background: var(--bg); }
+    header { background: var(--primary); color: white; padding: 14px 20px; display:flex; align-items:center; gap:16px; position:sticky; top:0; z-index:10;}
+    header img { height: 48px; width:auto; }
+    .brand { font-weight:700; font-size:18px; letter-spacing:.5px; }
+    nav { margin-left:auto; display:flex; gap:18px; flex-wrap:wrap; }
+    nav a { color: white; text-decoration: none; font-weight: 600; opacity:.95 }
+    nav a:hover { text-decoration: underline; }
+    .lang-switch { cursor: pointer; background: #fff; color: var(--primary); border: none; padding: 6px 10px; border-radius: 6px; font-weight:700; }
+    .hero { 
+      background: radial-gradient(1200px 400px at 50% 0%, #6fbf73 0%, #2a6b2a 55%, #1e4d1e 100%); 
+      color: white; padding: 90px 20px; text-align: center;
+    }
+    .hero h1 { font-size: clamp(28px,4.5vw,48px); margin:0 0 12px }
+    .hero p { font-size: clamp(16px,2vw,20px); opacity:.95; margin:0 }
+    .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+    .card { background:#fff; border:1px solid #e6e6e6; border-radius:14px; padding:24px; box-shadow:0 6px 18px rgba(0,0,0,.04); }
+    .section { margin: 40px 0 60px; }
+    .section h2 { text-align: center; margin: 0 0 18px; color: var(--primary); font-size:28px; }
+    .lead { text-align:center; max-width:860px; margin: 0 auto 18px; line-height:1.75 }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:18px; }
+    .product h3 { margin:.2rem 0 .4rem; color: var(--primary-dark)}
+    .info-list p{ margin:.25rem 0 }
+    form { max-width: 560px; margin: 10px auto 0; display:flex; flex-direction:column; gap:14px; }
+    label{ font-weight:600; font-size:14px }
+    input, textarea { padding: 12px; border: 1px solid #cfd8cf; border-radius: 10px; background:#fff; }
+    button { background: var(--primary); color: white; padding: 12px; border: none; border-radius: 10px; cursor: pointer; font-weight:700 }
+    button:hover { background: var(--primary-dark); }
+    footer { background: var(--primary); color: white; text-align: center; padding: 18px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header>
+    <img src="logo.png" alt="TIANHAO-RENHAO Logo">
+    <div class="brand">TIANHAO-RENHAO S.L</div>
+    <nav>
+      <a href="#about" data-zh="关于我们" data-en="About">关于我们</a>
+      <a href="#products" data-zh="产品服务" data-en="Products">产品服务</a>
+      <a href="#contact" data-zh="联系我们" data-en="Contact">联系我们</a>
+    </nav>
+    <button class="lang-switch" onclick="toggleLang()">EN / 中文</button>
+  </header>
+
+  <!-- 横幅 -->
+  <section class="hero">
+    <h1 data-zh="为欧洲市场提供新鲜健康的果蔬" data-en="Providing fresh and healthy fruits and vegetables for sale in Europe">
+      为欧洲市场提供新鲜健康的果蔬
+    </h1>
+    <p data-zh="专注食品零售与国际农产品贸易" data-en="Focused on food retail and international agri-trade">
+      专注食品零售与国际农产品贸易
+    </p>
+  </section>
+
+  <div class="container">
+    <!-- 关于我们 -->
+    <section id="about" class="section">
+      <h2 data-zh="关于我们" data-en="About Us">关于我们</h2>
+      <div class="card">
+        <p class="lead" 
+           data-zh="TIANHAO RENHAO S.L.总部位于西班牙巴塞罗那，是一家专注于食品零售和国际农产品贸易的综合性企业。自成立以来，公司致力于为欧洲市场提供高质量、可持续的产品和服务，业务涵盖零售运营、供应链管理和跨境农产品采购与分销。"
+           data-en="TIANHAO RENHAO S.L., headquartered in Barcelona, Spain, is a comprehensive enterprise specializing in food retail and international agricultural product trade. Since its establishment, the company has been dedicated to providing high-quality, sustainable products and services to the European market. Its business operations cover retail operations, supply chain management, and cross-border agricultural product sourcing and distribution.">
+          TIANHAO RENHAO S.L.总部位于西班牙巴塞罗那，是一家专注于食品零售和国际农产品贸易的综合性企业。自成立以来，公司致力于为欧洲市场提供高质量、可持续的产品和服务，业务涵盖零售运营、供应链管理和跨境农产品采购与分销。
+        </p>
+      </div>
+    </section>
+
+    <!-- 产品与服务 -->
+    <section id="products" class="section">
+      <h2 data-zh="产品与服务" data-en="Products & Services">产品与服务</h2>
+      <div class="grid">
+        <div class="card product">
+          <h3 data-zh="新鲜水果" data-en="Fresh Fruits">新鲜水果</h3>
+          <p data-zh="精选产地直供，保证品质与新鲜。" data-en="Sourced directly from farms to ensure freshness and quality.">
+            精选产地直供，保证品质与新鲜。
+          </p>
+        </div>
+        <div class="card product">
+          <h3 data-zh="健康蔬菜" data-en="Healthy Vegetables">健康蔬菜</h3>
+          <p data-zh="天然绿色种植，安全健康。" data-en="Naturally grown, safe and healthy.">
+            天然绿色种植，安全健康。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="section">
+      <h2 data-zh="联系我们" data-en="Contact Us">联系我们</h2>
+      <div class="card">
+        <div class="info-list">
+          <p data-zh="电话：0034 935 562 560" data-en="Phone: 0034 935 562 560">电话：0034 935 562 560</p>
+          <p data-zh="邮箱：tianhaorenhao2000@gmail.com" data-en="Email: tianhaorenhao2000@gmail.com">邮箱：tianhaorenhao2000@gmail.com</p>
+          <p data-zh="地址：C/ DE LES DELICIES 9,P.1 PTA.2., 08940 CORNELLA DE LLOBREGAT" 
+             data-en="Address: C/ DE LES DELICIES 9,P.1 PTA.2., 08940 CORNELLA DE LLOBREGAT">
+             地址：C/ DE LES DELICIES 9,P.1 PTA.2., 08940 CORNELLA DE LLOBREGAT
+          </p>
+        </div>
+
+        <form onsubmit="return sendMessage()">
+          <div>
+            <label data-zh="姓名" data-en="Name">姓名</label>
+            <input type="text" placeholder="姓名 / Name" required>
+          </div>
+          <div>
+            <label data-zh="邮箱" data-en="Email">邮箱</label>
+            <input type="email" placeholder="邮箱 / Email" required>
+          </div>
+          <div>
+            <label data-zh="留言" data-en="Message">留言</label>
+            <textarea placeholder="留言 / Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" data-zh="发送" data-en="Send">发送</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <!-- 页脚 -->
+  <footer>
+    <p>© 2025 TIANHAO-RENHAO S.L. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // 语言切换
+    let currentLang = "zh";
+    function toggleLang() {
+      currentLang = currentLang === "zh" ? "en" : "zh";
+      document.querySelectorAll("[data-zh]").forEach(el => {
+        el.innerText = el.getAttribute("data-" + currentLang);
+      });
+      return false;
+    }
+
+    // 表单提交（示例，无后端）
+    function sendMessage() {
+      alert(currentLang === "zh" ? "信息已提交！这是演示效果，需接入后台或 EmailJS 才能真正发送。" : "Submitted! This is a demo. Connect a backend or EmailJS to actually send.");
+      return false; // 阻止默认提交
+    }
+  </script>
+</body>
+</html>
